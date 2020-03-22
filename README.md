@@ -14,15 +14,15 @@
 ---------------
 The purpose of the disaster response application is to process raw text data and predict the disaster response category that message might fall into.
 - See images below.
-![file1](https://github.com/IamGr0o0t/Disaster_Response_Web_Application/Images/blob/master/DR_App_Classification.png)
+![file1](https://github.com/IamGr0o0t/Disaster_Response_Web_Application/blob/master/images/DR_App_Classification.png)
 
-![file1](https://github.com/IamGr0o0t/Disaster_Response_Web_Application/Images/blob/master/Genre_Message_Distribution.png)
+![file1](https://github.com/IamGr0o0t/Disaster_Response_Web_Application/blob/master/images/Genre_Message_Distribution.png)
 
-![file1](https://github.com/IamGr0o0t/Disaster_Response_Web_Application/Images/blob/master/Direct_Word_Cloud.png)
+![file1](https://github.com/IamGr0o0t/Disaster_Response_Web_Application/blob/master/images/Direct_Word_Cloud.png)
 
-![file1](https://github.com/IamGr0o0t/Disaster_Response_Web_Application/Images/blob/master/Social_Word_Cloud.png)
+![file1](https://github.com/IamGr0o0t/Disaster_Response_Web_Application/blob/master/images/Social_Word_Cloud.png)
 
-![file1](https://github.com/IamGr0o0t/Disaster_Response_Web_Application/Images/blob/master/News_Word_Cloud.png)
+![file1](https://github.com/IamGr0o0t/Disaster_Response_Web_Application/blob/master/images/News_Word_Cloud.png)
 
 ### Installation
 ---------------
@@ -52,52 +52,52 @@ conda install -c conda-forge (Insert Package Here)
 
 ### File descriptions
 ---------------
-- app
-| - template
-| |- master.html (main page of web app)
-| |- go.html (classification result page of web app)
-|- run.py (flask file that runs the app)
+- app<br>
+| - template<br>
+| |- master.html (main page of web app)<br>
+| |- go.html (classification result page of web app)<br>
+|- run.py (flask file that runs the app)<br>
 
-- data
-|- categories.csv (data to process, containing message categories)
-|- messages.csv (data to process, containing text data of the messages)
-|- DisasterResponse.db (sqlite database containing merged and cleaned data from
-                        csv files)
-|- process_data.py (ETL pipeline that extracts and transforms data from message
-                    & categories csv's and load clean data into sqlite database) 
+- data<br>
+|- categories.csv (data to process, containing message categories)<br>
+|- messages.csv (data to process, containing text data of the messages)<br>
+|- DisasterResponse.db (sqlite database containing merged and cleaned data from<br>
+                        csv files)<br>
+|- process_data.py (ETL pipeline that extracts and transforms data from message<br>
+                    & categories csv's and load clean data into sqlite database) <br>
 
-- images
-|- screenshots of the web application.
+- images<br>
+|- screenshots of the web application.<br>
 
-- models
-|- train_classifier.py (ML pipeline code which takes data from sqlite database
-                        as input. Performs text preprocessing with NLTK, train and test classification model and returns pickle file with fitted model.)
-|- classifier.pkl (!IMPORTANT this file is missing due to large format. One has to run train_classifier.py to have it visible. 
-                  Pickle file containing fitted model from train_classifier.py)
+- models<br>
+|- train_classifier.py (ML pipeline code which takes data from sqlite database<br>
+                        as input. Performs text preprocessing with NLTK, train and test classification model and returns pickle file with fitted model.)<br>
+|- classifier.pkl (!IMPORTANT this file is missing due to large format. One has to run train_classifier.py to have it visible. <br>
+                  Pickle file containing fitted model from train_classifier.py)<br>
 
-- notebooks
-|- ETL_Pipeline_Preparation.ipynb (Notebook containing code used for
-                                  process_data.py)
-|- ML_Pipeline_Preparation.ipynb (Notebook containing code used for
-                                  train_classifier.py)
+- notebooks<br>
+|- ETL_Pipeline_Preparation.ipynb (Notebook containing code used for<br>
+                                  process_data.py)<br>
+|- ML_Pipeline_Preparation.ipynb (Notebook containing code used for<br>
+                                  train_classifier.py)<br>
 
 
 ### How to Execute
 ---------------
 1. ETL Pipeline (preprocess_data.py)
 * Open terminal window and navigate to project directory
-  > $ cd FigureEight_Disaster_Response
-  > $ python data/process_data.py data/messages.csv data/categories.csv data/DisasterResponse.db
+  > $ cd FigureEight_Disaster_Response<br>
+  > $ python data/process_data.py data/messages.csv data/categories.csv data/DisasterResponse.db<br>
 
 2. ML Pipeline (train_classifier.py) 
 * Open terminal window and navigate to project directory
-  > $ cd FigureEight_Disaster_Response
-  > $ python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl
+  > $ cd FigureEight_Disaster_Response<br>
+  > $ python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl<br>
 
 3. Web Application (train_classifier.py) 
 * Open terminal window and navigate to project directory
-  > $ cd FigureEight_Disaster_Response
-  > $ python app/run.py
+  > $ cd FigureEight_Disaster_Response<br>
+  > $ python app/run.py<br>
 
 ### Results and Findings
 ---------------

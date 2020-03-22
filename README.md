@@ -98,6 +98,9 @@ conda install -c conda-forge (Insert Package Here)
 * Open terminal window and navigate to project directory
   > $ cd FigureEight_Disaster_Response<br>
   > $ python app/run.py<br>
+* Open default internet browser and paste url shown in the terminal window eg. http://0.0.0.0:3001<br>
+* Web application allows to input any text message and it will categorize it among 35 category classes.<br>
+
 
 ### Results and Findings
 ---------------
